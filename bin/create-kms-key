@@ -1,0 +1,18 @@
+#!/usr/bin/env node
+
+const { promisify } = require('util');
+const { KMS } = require('aws-sdk');
+
+const kms = new KMS();
+
+const createKey = promisify(kms.createKey.bind(kms));
+
+(async () => {
+  const response = await createKey({
+    KeyUsage: 'ENCRYPT_DECRYPT',
+    CustomerMasterKeySpec: 'SYMMETRIC_DEFAULT'
+  });
+
+  console.log('KMS key created', response);
+})();
+
