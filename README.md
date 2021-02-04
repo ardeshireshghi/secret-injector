@@ -1,6 +1,6 @@
 # secret-injector
 
-"SecretIngector" is a simple secret manager tool that uses AWS KMS (Key Management Service). It benefits from the concept of "Envelope Encryption" which is a combination of CMK (Customer Master Keys) and data keys.
+"SecretIngector" is a simple secret manager tool that uses AWS KMS (Key Management Service). It benefits from the concept of ["Envelope Encryption"](https://docs.aws.amazon.com/kms/latest/developerguide/concepts.html#enveloping) which is a combination of CMK (Customer Master Keys) and data keys.
 
 ## How it works?
 
